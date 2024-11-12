@@ -6,5 +6,6 @@ int nhan(int a, int b) {
 
 int main(){
 	cout << nhan(2,3);
+	cout << "Abc";
 	return 0;
 }
