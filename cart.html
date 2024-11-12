@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-3b124ff0e0d7a67cd8c995d0aeb1d15a.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css">
+</head>
+
+<body class="bg-gray-100">
+    <!-- <header>
+        <h1>Giỏ Hàng</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="order.html">Đơn Hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Sản Phẩm Trong Giỏ Hàng</h2>
+        <div id="cart-items">
+            Sản phẩm sẽ được thêm vào đây bằng JavaScript
+        </div>
+        <button id="checkout-button">Thanh Toán</button>
+    </main> -->
+    <div class="bg-gradient-to-r from-red-500 to-orange-500 text-white">
+        <div class="container mx-auto px-4 py-1">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="https://storage.googleapis.com/a1aa/image/4C5hCDstE3pUCNAiW25sr1OTv9NnKDjeUEZPNW53uOMS1G3JA.jpg"
+                        alt="Shopee logo" class="h-6">
+                    <!-- Trang chủ -->
+                    <a href="index.html">
+                        <span class="text-xl font-bold">Shopee</span>
+                    </a>
+                </div>
+                <div class="flex space-x-2 text-xs">
+                    <a href="#" class="hover:underline">Kênh Người Bán</a>
+                    <a href="#" class="hover:underline">Trở thành Người bán Shopee</a>
+                    <a href="#" class="hover:underline">Tải ứng dụng</a>
+                    <a href="#" class="hover:underline">Kết nối <i class="fab fa-facebook"></i> <i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:underline"><i class="fas fa-bell"></i> Thông Báo</a>
+                    <a href="#" class="hover:underline"><i class="fas fa-question-circle"></i> Hỗ Trợ</a>
+                    <a href="#" class="hover:underline"><i class="fas fa-globe"></i> Tiếng Việt</a>
+                    <a href="#" class="hover:underline">Đăng Ký</a>
+                    <a href="#" class="hover:underline">Đăng Nhập</a>
+                </div>
+            </div>
+            <div class="flex items-center mt-2">
+                <input type="text" placeholder="Shopee bao ship 0Đ - Đăng ký ngay!"
+                    class="w-full p-1 rounded-md text-black text-sm">
+                <!-- Giỏ hàng -->
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart text-xl mx-2"></i>
+                </a>
+                <!-- Đơn hàng -->
+                <a href="order.html">
+                    <i class="fa-solid fa-receipt"></i>
+                </a>
+            </div>
+            <div class="flex space-x-2 mt-1 text-xs">
+                <a href="#" class="hover:underline">8 Plus Giá Rẻ</a>
+                <a href="#" class="hover:underline">Săn Sale iPhone 14 Pro Max 1k</a>
+                <a href="#" class="hover:underline">Vợt Cầu Lông Đơn Căng 11kg</a>
+                <a href="#" class="hover:underline">Áo Khoác Hoodie Có Dây Kéo</a>
+                <a href="#" class="hover:underline">Tai Nghe Bluetooth Rẻ 1k</a>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto p-4">
+        <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+                <img alt="Shopee logo" class="mr-2" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/vlqEFFxYsFZ5Ilk5SxN0NmhWgtJPtjFAd3khpHeztMkTAH3JA.jpg"
+                    width="40" />
+                <h1 class="text-2xl font-bold text-orange-500">
+                    Shopee
+                </h1>
+                <span class="ml-2 text-lg">
+                    Giỏ Hàng
+                </span>
+            </div>
+            <div class="flex items-center">
+                <input class="border border-gray-300 rounded-l px-4 py-2" placeholder="Phí Ship 0Đ" type="text" />
+                <button class="bg-orange-500 text-white px-4 py-2 rounded-r">
+                    <i class="fas fa-search">
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Cart Table -->
+        <div class="bg-white rounded shadow">
+            <div class="flex items-center p-4 border-b">
+                <input class="mr-2" type="checkbox" />
+                <span class="flex-1">
+                    Sản Phẩm
+                </span>
+                <span class="w-[10%] text-center">
+                    Đơn Giá
+                </span>
+                <span class="w-[10%] text-center">
+                    Số Lượng
+                </span>
+                <span class="w-[10%] text-center">
+                    Số Tiền
+                </span>
+                <span class="w-[20%] text-center">
+                    Thao Tác
+                </span>
+            </div>
+            <!-- Shop 1 -->
+            <div class="p-4 border-b">
+                <div class="flex items-center mb-2">
+                    <input class="mr-2" type="checkbox" />
+                    <span class="font-bold">
+                        PAYZ SHOP
+                    </span>
+                </div>
+                <div class="flex items-center">
+                    <input class="mr-2" type="checkbox" />
+                    <img alt="Product image" class="w-20 h-20 mr-4" height="80"
+                        src="https://storage.googleapis.com/a1aa/image/bRqOKQRcUjYQE5nyr0LYRw2bWo5ENNj6qNdSHqirY2eSAH3JA.jpg"
+                        width="80" />
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-gray-200 text-gray-500 px-2 py-1 rounded mr-2">
+                                Hết Hàng
+                            </span>
+                            <span class="text-lg">
+                                Chuột không dây Logitech G304 - 4 chế độ, 8 nút bấm, onboard memory
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-2">
+                            Phân Loại Hàng:
+                            <span class="text-black">
+                                Chuột G304
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            Phân loại hàng này đã bị xoá, vui lòng lựa chọn một phân loại khác.
+                        </div>
+                    </div>
+                    <div class="w-[10%] text-center text-red-500">
+                        ₫0
+                    </div>
+                    <div class="w-[10%] text-center">
+                        1
+                    </div>
+                    <div class="w-[10%] text-center text-red-500">
+                        ₫0
+                    </div>
+                    <div class="w-[20%] text-center">
+                        <a class="text-red-500" href="#">
+                            Xóa
+                        </a>
+                        <br />
+                        <a class="text-gray-500" href="#">
+                            Tìm sản phẩm tương tự
+                        </a>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-500 mt-2">
+                    Giảm ₫300.000 phí vận chuyển đơn tối thiểu ₫0; Giảm ₫500.000 phí vận chuyển đơn tối thiểu ₫500.000
+                    <a class="text-blue-500" href="#">
+                        Tìm hiểu thêm
+                    </a>
+                </div>
+            </div>
+            <div class="p-4 border-b">
+                <div class="flex items-center mb-2">
+                    <input class="mr-2" type="checkbox" />
+                    <span class="font-bold">
+                        PAYZ SHOP
+                    </span>
+                </div>
+                <div class="flex items-center">
+                    <input class="mr-2" type="checkbox" />
+                    <img alt="Product image" class="w-20 h-20 mr-4" height="80"
+                        src="https://storage.googleapis.com/a1aa/image/bRqOKQRcUjYQE5nyr0LYRw2bWo5ENNj6qNdSHqirY2eSAH3JA.jpg"
+                        width="80" />
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-gray-200 text-gray-500 px-2 py-1 rounded mr-2">
+                                Hết Hàng
+                            </span>
+                            <span class="text-lg">
+                                Chuột không dây Logitech G304 - 4 chế độ, 8 nút bấm, onboard memory
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-2">
+                            Phân Loại Hàng:
+                            <span class="text-black">
+                                Chuột G304
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            Phân loại hàng này đã bị xoá, vui lòng lựa chọn một phân loại khác.
+                        </div>
+                    </div>
+                    <div class="w-[10%] text-center text-red-500">
+                        ₫0
+                    </div>
+                    <div class="w-[10%] text-center">
+                        1
+                    </div>
+                    <div class="w-[10%] text-center text-red-500">
+                        ₫0
+                    </div>
+                    <div class="w-[20%] text-center">
+                        <a class="text-red-500" href="#">
+                            Xóa
+                        </a>
+                        <br />
+                        <a class="text-gray-500" href="#">
+                            Tìm sản phẩm tương tự
+                        </a>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-500 mt-2">
+                    Giảm ₫300.000 phí vận chuyển đơn tối thiểu ₫0; Giảm ₫500.000 phí vận chuyển đơn tối thiểu ₫500.000
+                    <a class="text-blue-500" href="#">
+                        Tìm hiểu thêm
+                    </a>
+                </div>
+            </div>
+            <div class="p-4 border-b">
+                <div class="flex items-center mb-2">
+                    <input class="mr-2" type="checkbox" />
+                    <span class="font-bold">
+                        PAYZ SHOP
+                    </span>
+                </div>
+                <div class="flex items-center">
+                    <input class="mr-2" type="checkbox" />
+                    <img alt="Product image" class="w-20 h-20 mr-4" height="80"
+                        src="https://storage.googleapis.com/a1aa/image/bRqOKQRcUjYQE5nyr0LYRw2bWo5ENNj6qNdSHqirY2eSAH3JA.jpg"
+                        width="80" />
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-gray-200 text-gray-500 px-2 py-1 rounded mr-2">
+                                Hết Hàng
+                            </span>
+                            <span class="text-lg">
+                                Chuột không dây Logitech G304 - 4 chế độ, 8 nút bấm, onboard memory
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-2">
+                            Phân Loại Hàng:
+                            <span class="text-black">
+                                Chuột G304
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            Phân loại hàng này đã bị xoá, vui lòng lựa chọn một phân loại khác.
+                        </div>
+                    </div>
+                    <div class="w-[10%] text-center text-red-500">
+                        ₫0
+                    </div>
+                    <div class="w-[10%] text-center">
+                        1
+                    </div>
+                    <div class="w-[10%] text-center text-red-500">
+                        ₫0
+                    </div>
+                    <div class="w-[20%] text-center">
+                        <a class="text-red-500" href="#">
+                            Xóa
+                        </a>
+                        <br />
+                        <a class="text-gray-500" href="#">
+                            Tìm sản phẩm tương tự
+                        </a>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-500 mt-2">
+                    Giảm ₫300.000 phí vận chuyển đơn tối thiểu ₫0; Giảm ₫500.000 phí vận chuyển đơn tối thiểu ₫500.000
+                    <a class="text-blue-500" href="#">
+                        Tìm hiểu thêm
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cửa hàng trực tuyến</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>
