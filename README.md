@@ -1,2 +1,2 @@
 # GitHub_Linux
-first commit
+first commitxong chuc nang cong va tru
